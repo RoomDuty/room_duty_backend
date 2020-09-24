@@ -5,4 +5,6 @@ class User < ApplicationRecord
   validates_presence_of :password_confirmation, require: true, :on => :create
 
   has_secure_password
+
+  enum role: ["user", "housekeeping_staff_member", "admin"]
 end
