@@ -7,4 +7,6 @@ class User < ApplicationRecord
   has_secure_password
 
   enum role: ["user", "housekeeping_staff_member", "admin"]
+
+  has_many :floors
 end
