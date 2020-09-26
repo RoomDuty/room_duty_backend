@@ -15,6 +15,8 @@ describe User, type: :model do
 
   describe 'relationships' do
     it { should have_many :floors }
+    it { should have_many :reservations }
+    it { should have_many(:rooms).through(:reservations) }
   end
 end
     

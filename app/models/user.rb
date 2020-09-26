@@ -9,4 +9,6 @@ class User < ApplicationRecord
   enum role: ["user", "housekeeping_staff_member", "admin"]
 
   has_many :floors
+  has_many :reservations
+  has_many :rooms, through: :reservations
 end
