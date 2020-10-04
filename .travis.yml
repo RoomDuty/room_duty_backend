@@ -1,0 +1,10 @@
+language: ruby
+cache: bundler
+rvm:
+- 2.7.1
+services:
+- postgresql
+before_install:
+- gem install bundler
+before_script:
+- psql -c 'create database room_duty_backend_test;' -U postgres
